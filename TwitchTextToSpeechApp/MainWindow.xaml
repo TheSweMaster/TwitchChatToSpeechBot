@@ -34,6 +34,7 @@
             <TextBlock Grid.Row="2" Grid.Column="0" TextAlignment="Center" VerticalAlignment="Center" FontSize="18" FontWeight="Bold">OAuth Code</TextBlock>
             <TextBlock Grid.Row="3" Grid.Column="0" TextAlignment="Center" VerticalAlignment="Center" FontSize="18" FontWeight="Bold">Channel Name</TextBlock>
             <Button Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" FontSize="18" FontWeight="Bold" Click="Button_Click_ConnectTwitchBot" Margin="100,10,-100,20">Connect</Button>
+            <Button Grid.Row="4" Grid.Column="0" VerticalAlignment="Center" FontSize="18" FontWeight="Bold" Click="Button_Click_SaveSettings" Margin="100,90,-100,20">Save Settings</Button>
         </Grid>
 
         <Grid Grid.Column="1" Grid.Row="0">

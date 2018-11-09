@@ -10,11 +10,11 @@ namespace TwitchTextToSpeechApp
     {
         private static TwitchClient client;
 
-        public static void Connect(string username, string oAuthcode, string channel)
+        public static void Connect(TwitchConnectSettings twitchSettings)
         {
             client = new TwitchClient();
-            var credentials = new ConnectionCredentials(username, oAuthcode);
-            client.Initialize(credentials, channel);
+            var credentials = new ConnectionCredentials(twitchSettings.Username, twitchSettings.OAuthCode);
+            client.Initialize(credentials, twitchSettings.ChannelName);
             client.Connect();
 
             client.OnJoinedChannel += OnJoinedChannel;
@@ -23,8 +23,7 @@ namespace TwitchTextToSpeechApp
 
             if (!client.IsConnected)
             {
-                var message = $"Could not connect to Twitch.";
-                MessageBox.Show(message, "Error!");
+                MessageBox.Show("Could not connect to Twitch.", "Error!");
             }
         }
 
@@ -37,8 +36,7 @@ namespace TwitchTextToSpeechApp
         private static void OnJoinedChannel(object sender, OnJoinedChannelArgs e)
         {
             client.SendMessage(e.Channel, "Text to speech bot joined the channel.");
-            var message = $"Connected to channel '{e.Channel}'.";
-            MessageBox.Show(message, "Success!");
+            MessageBox.Show($"Connected to channel '{e.Channel}'.", "Success!");
         }
 
         private static void OnMessageReceived(object sender, OnMessageReceivedArgs e)
