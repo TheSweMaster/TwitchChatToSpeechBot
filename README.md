@@ -6,7 +6,7 @@
 ## Tutorial
 
 ### Download
-1. Download the file https://drive.google.com/file/d/10zqMgbsDpjqRnJK8f4XLO0GF4lkIS7Ro/view?usp=sharing
+1. Download the latest release: TwitchTextToSpeechApp_X.zip 
 2. Extract the "TwitchTextToSpeechApp.zip" file
 3. Run "Setup.exe"
 4. When installed run "TwitchTextToSpeechApp.application" or click on any shortcut to start the app.
